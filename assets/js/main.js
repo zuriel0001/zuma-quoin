@@ -3,6 +3,11 @@
 (function () {
   "use strict";
 
+  /* WhatsApp number for the chat buttons: international format, digits
+     only, no "+" or spaces (for example "233201234567"). While it is empty
+     the buttons open the contact page instead. */
+  var WHATSAPP_NUMBER = "";
+
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
@@ -27,7 +32,7 @@
     nav.addEventListener("click", function (e) {
       if (e.target.closest("a")) setOpen(false);
     });
-    window.matchMedia("(min-width: 961px)").addEventListener("change", function (e) {
+    window.matchMedia("(min-width: 1121px)").addEventListener("change", function (e) {
       if (e.matches) setOpen(false);
     });
   }
@@ -54,6 +59,16 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ---- WhatsApp chat buttons --------------------------------------------- */
+  if (WHATSAPP_NUMBER) {
+    $$("[data-whatsapp]").forEach(function (a) {
+      var text = "Hello Zumo Quoin, I would like to ask about your poultry feed.";
+      a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
   }
 
   /* ---- Footer year ------------------------------------------------------- */
@@ -134,6 +149,35 @@
     var fromHash = function () { apply(location.hash.replace("#", "") || "all", false); };
     window.addEventListener("hashchange", fromHash);
     fromHash();
+  }
+
+  /* ---- Stockist finder (where to buy) ------------------------------------ */
+  var finder = $("[data-finder]");
+  if (finder) {
+    var q = $("[data-finder-query]", finder);
+    var region = $("[data-finder-region]", finder);
+    var stockists = $$("[data-stockist]");
+    var countOut = $("[data-finder-count]", finder);
+    var none = $("[data-finder-empty]");
+    var norm = function (t) { return t.toLowerCase().replace(/\s+/g, " ").trim(); };
+
+    var run = function () {
+      var term = norm(q.value);
+      var reg = region.value;
+      var shown = 0;
+      stockists.forEach(function (el) {
+        var match = (!reg || el.dataset.region === reg) &&
+          (!term || norm(el.textContent).indexOf(term) !== -1);
+        el.hidden = !match;
+        if (match) shown++;
+      });
+      countOut.textContent = shown + (shown === 1 ? " stockist" : " stockists");
+      none.hidden = shown !== 0;
+    };
+    finder.addEventListener("submit", function (e) { e.preventDefault(); run(); });
+    q.addEventListener("input", run);
+    region.addEventListener("change", run);
+    run();
   }
 
   /* ---- Contact form ------------------------------------------------------ */

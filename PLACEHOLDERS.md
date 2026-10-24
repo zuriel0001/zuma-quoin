@@ -2,7 +2,7 @@
 
 Every unconfirmed fact on the site is wrapped in `<span class="ph">[…]</span>` and highlighted on the page. Search the HTML files for `class="ph"` to find them all. When a value is confirmed, replace the whole span with the plain text.
 
-When every placeholder is gone, also remove the two "Note for the Zumo Quoin team" banners (`<div class="notice">`) on `products.html` and `quality.html`.
+When every placeholder is gone, also remove the "Note for the Zumo Quoin team" banners (`<div class="notice">`) on `products.html`, `quality.html` and `stockists.html`.
 
 ## Company details (footer on every page, and `contact.html`)
 
@@ -53,6 +53,29 @@ Remember to update the product list in the contact form's "Feed of interest" dro
 - [ ] Regulatory registration
 - [ ] Feed shelf life (weeks)
 - [ ] Whether custom formulation or toll milling is offered
+
+## WhatsApp
+
+- [ ] Set `WHATSAPP_NUMBER` in `assets/js/main.js` (see README)
+
+## Spec sheets (`spec-sheets/*.html`, then re-save each PDF)
+
+- [ ] Product code, issue number and issue month
+- [ ] Full typical analysis (10 nutrients) for each feed
+- [ ] Bag size and shelf life
+- [ ] Ingredients list
+- [ ] Ages in the directions for use
+- [ ] Mixing ratio for Layer Concentrate
+- [ ] Company address, phone and email in the footer of each sheet
+
+## Where to buy (`stockists.html`)
+
+- [ ] Replace the three example stockists with real ones (name, town, region, landmark, phone, hours, feeds stocked)
+- [ ] Replace the example regions in the Region list
+
+## Farmer tips
+
+- [ ] Read through the six articles and adjust any advice to match your own recommendations
 
 ## Marketing claims to confirm
 

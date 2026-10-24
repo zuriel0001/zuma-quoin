@@ -12,7 +12,11 @@ It is a fast, dependency-free static site: plain HTML, one stylesheet and one sm
 | `about.html` | About us: story, key figures, mission and vision, values, facility, leadership |
 | `products.html` | Our feeds: filterable product range with life stage, form, bag size and typical analysis |
 | `quality.html` | Process & quality: seven-step production process, quality controls, certifications, FAQ |
+| `tips.html` | Farmer tips: index of practical guides |
+| `tips-*.html` | Six farmer-tips articles (feed storage, brooding chicks, eggshells, changing feeds, hot weather, feed waste) |
+| `stockists.html` | Where to buy: searchable list of stockists by town and region, plus order-direct and become-a-stockist links |
 | `contact.html` | Contact: enquiry form (prefilled from product and planner links), contact details, hours, map slot |
+| `spec-sheets/*.pdf` | Downloadable one-page A4 specification sheet for each feed (source: `spec-sheets/*.html`) |
 | `404.html` | Not-found page |
 
 ## Before launch: fill in the placeholders
@@ -46,10 +50,27 @@ The form posts to [Formspree](https://formspree.io) (free tier available), so no
 
 Until step 2 is done, submitting the form does not pretend to send anything. It tells the visitor that online enquiries aren't switched on yet and offers a pre-written email instead.
 
+## Switch on the WhatsApp button
+
+Every page has a floating "Chat on WhatsApp" button (an icon on phones). Open `assets/js/main.js` and set `WHATSAPP_NUMBER` near the top to the business WhatsApp number in international format, digits only, for example `"233201234567"`. Until it is set, the button opens the contact page instead.
+
+## Update a spec sheet
+
+Each PDF in `spec-sheets/` is printed from the HTML page of the same name.
+
+1. Edit the figures in `spec-sheets/<feed>.html` (and the matching card on `products.html`).
+2. Open the page in Chrome, choose **Print**, set destination to **Save as PDF**, paper **A4**, margins **None**, and tick **Background graphics**.
+3. Save over `spec-sheets/<feed>.pdf`.
+
+## Add stockists and farmer tips
+
+- **Stockists:** in `stockists.html`, copy one `<article class="card stockist">` block per shop, fill in its details, and set `data-region` to match an option in the Region list. Delete the "Example" badges and the team note when done.
+- **Farmer tips:** copy an existing `tips-*.html` article, change the title, text and the "In this guide" links, then add a card for it to `tips.html` (and optionally the home page).
+
 ## Editing notes
 
 - **Colours, fonts and spacing** are design tokens at the top of `assets/css/styles.css`.
-- **Header and footer** are repeated in each page. When you change one (for example the phone number in the footer), make the same change in all six HTML files; a project-wide find-and-replace does it in one go.
+- **Header and footer** are repeated in each page. When you change one (for example the phone number in the footer), make the same change in every HTML file; a project-wide find-and-replace does it in one go.
 - **Feed planner figures** (average grams per bird per day, and the 50 kg bag size) are in `assets/js/main.js` under `PROFILES` and `BAG_KG`. They are broad industry averages for planning; replace them with your own figures if you have them.
 - **Photos**: dashed "Photo placeholder" boxes mark where real photography should go. Replace each `.photo-slot` block with an `<img>` (with `width`, `height` and descriptive `alt` text) inside a `<div class="media">`.
 - **Logo**: `assets/img/logo-mark.svg` is a placeholder mark (an ear of grain). Swap in the official logo if there is one, and regenerate `favicon.svg`, `apple-touch-icon.png` and `og-image.png`.
@@ -59,4 +80,4 @@ Until step 2 is done, submitting the form does not pretend to send anything. It 
 - Responsive from 320 px phones to wide desktops, with no horizontal scrolling.
 - Accessibility: semantic landmarks, skip link, keyboard-friendly navigation and form, visible focus styles, form errors announced and linked to fields, respects reduced-motion preferences. Every page passes an automated axe-core WCAG 2.1 AA scan with zero violations.
 - Works without JavaScript: navigation, content and the form remain usable; JS only adds enhancements.
-- Lightweight: about 180 KB of HTML, CSS and JS across all pages before compression, with illustrations as small SVGs.
+- Lightweight: illustrations are small SVGs and there are no third-party scripts apart from Google Fonts.

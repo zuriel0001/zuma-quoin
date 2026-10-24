@@ -1,0 +1,383 @@
+/* Zumo Quoin Limited — A4 product specification sheets (spec-sheets/*.html).
+   Shares the site's colours and typefaces; laid out to print on one A4 page. */
+:root {
+  --green-950: #0b2016;
+  --green-900: #0f2a1d;
+  --green-700: #1e4d35;
+  --green-600: #2a6447;
+  --green-100: #e5efe8;
+  --gold-600: #c98a12;
+  --gold-500: #e3a324;
+  --gold-400: #f0bb4b;
+  --gold-100: #fcefd2;
+  --cream: #fbf7ee;
+  --paper: #ffffff;
+  --ink: #17201a;
+  --muted: #536058;
+  --line: #e4dccb;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  background: #e9e3d4;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.ph {
+  background: rgb(227 163 36 / 0.2);
+  border-bottom: 1px dashed var(--gold-600);
+  border-radius: 2px;
+  padding: 0 0.2em;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: min(210mm, 100% - 2rem);
+  margin: 1.25rem auto 0.75rem;
+  font-size: 0.95rem;
+}
+.toolbar a {
+  color: var(--green-700);
+  font-weight: 600;
+  text-decoration: none;
+}
+.toolbar a:hover {
+  text-decoration: underline;
+}
+.toolbar__btn {
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: var(--green-900);
+  color: #fff !important;
+}
+.toolbar__btn:hover {
+  text-decoration: none !important;
+  background: var(--green-700);
+}
+a:focus-visible {
+  outline: 3px solid var(--gold-500);
+  outline-offset: 3px;
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 2rem;
+  padding: 0 14mm 12mm;
+  background: var(--paper);
+  box-shadow: 0 20px 50px -20px rgb(15 42 29 / 0.35);
+}
+
+.sheet__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 -14mm;
+  padding: 6mm 14mm;
+  background: var(--green-900);
+  color: #c3d4c8;
+}
+.sheet__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sheet__brand strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15pt;
+  line-height: 1;
+  color: #fff;
+}
+.sheet__brand span {
+  display: block;
+  margin-top: 3px;
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  color: var(--gold-400);
+}
+.sheet__doc {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  text-align: right;
+  font-size: 8.5pt;
+}
+.sheet__doc > span:first-child {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+}
+.sheet__head .ph {
+  color: #f3e3bb;
+  background: rgb(240 187 75 / 0.18);
+  border-bottom-color: var(--gold-400);
+}
+
+.sheet__title {
+  padding: 7mm 0 4mm;
+  border-bottom: 2px solid var(--gold-500);
+}
+.sheet__eyebrow {
+  margin: 0 0 2mm;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-600);
+}
+h1 {
+  margin: 0 0 2mm;
+  font-family: var(--font-display);
+  font-size: 30pt;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--green-900);
+}
+.sheet__lead {
+  max-width: 60ch;
+  margin: 0;
+  font-size: 11.5pt;
+  color: var(--muted);
+}
+
+.sheet__facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 4mm 0;
+  border-radius: 8px;
+  background: var(--cream);
+}
+.sheet__facts div {
+  padding: 3.5mm 4mm;
+}
+.sheet__facts div + div {
+  border-left: 1px solid var(--line);
+}
+.sheet__facts dt {
+  font-size: 7.5pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sheet__facts dd {
+  margin: 1mm 0 0;
+  font-weight: 600;
+  color: var(--green-900);
+}
+
+.sheet__cols {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 9mm;
+  margin-top: 3mm;
+}
+.sheet__cols--even {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3mm;
+  padding-top: 2mm;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin: 3mm 0 2.5mm;
+  font-family: var(--font-display);
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--green-900);
+}
+p {
+  margin: 0 0 2mm;
+}
+
+.sheet__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.sheet__table th,
+.sheet__table td {
+  padding: 1.45mm 2mm;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.sheet__table thead th {
+  border-bottom: 1.5px solid var(--green-900);
+  font-size: 7.5pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sheet__table tbody th {
+  font-weight: 500;
+}
+.sheet__table small {
+  color: var(--muted);
+}
+.sheet__table td {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--green-900);
+}
+.sheet__table tbody tr:nth-child(odd) {
+  background: #fcfaf5;
+}
+.sheet__small {
+  margin-top: 2mm;
+  font-size: 8pt;
+  color: var(--muted);
+}
+
+.sheet__ticks,
+.sheet__list {
+  display: grid;
+  gap: 1.6mm;
+  margin: 0 0 3mm;
+  padding: 0;
+  list-style: none;
+}
+.sheet__ticks li {
+  position: relative;
+  padding-left: 6mm;
+}
+.sheet__ticks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 3.4mm;
+  height: 1.8mm;
+  border-left: 2px solid var(--green-600);
+  border-bottom: 2px solid var(--green-600);
+  transform: rotate(-45deg);
+}
+.sheet__list {
+  counter-reset: d;
+}
+.sheet__list li {
+  position: relative;
+  padding-left: 7mm;
+  counter-increment: d;
+}
+.sheet__list li::before {
+  content: counter(d);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  display: grid;
+  place-items: center;
+  width: 4.6mm;
+  height: 4.6mm;
+  border-radius: 50%;
+  background: var(--gold-100);
+  color: #7a4f00;
+  font-size: 7pt;
+  font-weight: 700;
+}
+
+.sheet__foot {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1mm 6mm;
+  margin-top: auto;
+  padding-top: 4mm;
+  border-top: 2px solid var(--green-900);
+  font-size: 8.5pt;
+  color: var(--muted);
+}
+.sheet__foot div {
+  display: grid;
+  gap: 0.5mm;
+}
+.sheet__foot div:nth-child(2) {
+  justify-items: end;
+  text-align: right;
+}
+.sheet__foot strong {
+  color: var(--green-900);
+}
+.sheet__foot p {
+  grid-column: 1 / -1;
+  margin: 2mm 0 0;
+  font-size: 7.5pt;
+}
+
+@media screen and (max-width: 820px) {
+  .sheet {
+    width: auto;
+    min-height: 0;
+    margin: 0 1rem 2rem;
+    padding: 0 1.25rem 1.5rem;
+  }
+  .sheet__head {
+    margin: 0 -1.25rem;
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+  }
+  .sheet__doc {
+    justify-items: start;
+    text-align: left;
+  }
+  .sheet__facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sheet__facts div:nth-child(3) {
+    border-left: 0;
+  }
+  .sheet__cols,
+  .sheet__cols--even {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .sheet__foot {
+    grid-template-columns: 1fr;
+  }
+  .sheet__foot div:nth-child(2) {
+    justify-items: start;
+    text-align: left;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .toolbar {
+    display: none;
+  }
+  .sheet {
+    min-height: 296mm;
+    margin: 0;
+    box-shadow: none;
+  }
+}
