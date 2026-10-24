@@ -110,6 +110,8 @@
     var birdsRange = $("[data-birds-range]", est);
     var days = $("[data-days]", est);
     var link = $("[data-out-link]", est);
+    // The contact page's path is relative to this page, so take it from the link.
+    var contactBase = link.getAttribute("href").split("?")[0];
 
     var update = function () {
       var type = ($("input[name=bird]:checked", est) || {}).value || "layers";
@@ -123,7 +125,7 @@
       $("[data-out-bags]", est).textContent = fmt(Math.ceil(total / BAG_KG));
       $("[data-out-feed]", est).textContent = p.feed;
       var periodText = days.options[days.selectedIndex].text;
-      link.href = "contact.html?enquiry=quote&product=" + p.product +
+      link.href = contactBase + "?enquiry=quote&product=" + p.product +
         "&qty=" + encodeURIComponent(fmt(total) + " kg over " + periodText) +
         "&birds=" + count;
     };

@@ -1,0 +1,20 @@
+{
+  "name": "Zumo Quoin Limited",
+  "short_name": "Zumo Quoin",
+  "icons": [
+    {
+      "src": "../favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0f2a1d",
+  "background_color": "#fbf7ee",
+  "display": "browser",
+  "start_url": "../"
+}
