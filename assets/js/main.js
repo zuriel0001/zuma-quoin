@@ -11,6 +11,24 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
+  /* ---- Open new pages at the top ------------------------------------------
+     Browsers already do this, but some previews and embeds keep the old
+     scroll position when a link opens another page. Back/forward visits and
+     links to a #section are left alone. */
+  var navEntry = window.performance && performance.getEntriesByType ? performance.getEntriesByType("navigation")[0] : null;
+  if (!location.hash && (!navEntry || navEntry.type === "navigate")) {
+    var framed = window.self !== window.top;
+    var toTop = function () {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      if (framed && document.body) document.body.scrollIntoView({ block: "start", behavior: "instant" });
+    };
+    toTop();
+    window.addEventListener("load", function () {
+      toTop();
+      setTimeout(toTop, 150);
+    });
+  }
+
   /* ---- Mobile navigation ------------------------------------------------ */
   var toggle = $("[data-nav-toggle]");
   var nav = $("[data-nav]");
