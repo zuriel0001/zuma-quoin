@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Zumo Quoin">
+  <rect width="48" height="48" rx="13" fill="#0f2a1d"/>
+  <circle cx="23.26" cy="23.26" r="12.96" fill="none" stroke="#fbf7ee" stroke-width="6.12"/>
+  <rect x="24.88" y="28.84" width="16.92" height="7.2" rx="1.98" fill="#0f2a1d"/>
+  <rect x="30.64" y="34.96" width="11.16" height="7.2" rx="1.98" fill="#0f2a1d"/>
+  <rect x="26.14" y="30.1" width="14.4" height="4.68" rx="0.72" fill="#e3a324"/>
+  <rect x="31.9" y="36.22" width="8.64" height="4.68" rx="0.72" fill="#e3a324"/>
+</svg>
