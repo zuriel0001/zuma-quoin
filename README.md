@@ -11,7 +11,6 @@ Each page lives in its own folder as `index.html`, which gives clean web address
 ```
 index.html                 Home: hero, feed range, why choose us, process, feed planner, who we serve, tips
 404.html                   Not-found page
-favicon.svg
 robots.txt
 sitemap.xml
 about/index.html           About us: story, key figures, mission and vision, values, facility, leadership
@@ -24,7 +23,7 @@ where-to-buy/index.html    Where to buy: stockist finder by town and region
 contact/index.html         Contact: enquiry form, contact details, opening hours, map slot
 assets/css/                styles.css (site) and spec-sheet.css (PDF sheets)
 assets/js/                 main.js
-assets/images/             Logo, illustrations, social sharing image, app icon
+assets/images/             Logo, favicon, illustrations, social sharing image, app icon
 assets/site.webmanifest
 downloads/spec-sheets/     One A4 PDF per feed, plus the HTML page each is printed from
 docs/PLACEHOLDERS.md       Checklist of details to fill in before launch
@@ -88,7 +87,7 @@ Each PDF in `downloads/spec-sheets/` is printed from the HTML page of the same n
 - **Header and footer** are repeated in each page. When you change one (for example the phone number in the footer), make the same change in every HTML file; a project-wide find-and-replace does it in one go.
 - **Feed planner figures** (average grams per bird per day, and the 50 kg bag size) are in `assets/js/main.js` under `PROFILES` and `BAG_KG`. They are broad industry averages for planning; replace them with your own figures if you have them.
 - **Photos**: dashed "Photo placeholder" boxes mark where real photography should go. Replace each `.photo-slot` block with an `<img>` (with `width`, `height` and descriptive `alt` text) inside a `<div class="media">`.
-- **Logo**: `assets/images/logo-mark.svg` is a placeholder mark (an ear of grain). Swap in the official logo if there is one, and regenerate `favicon.svg`, `apple-touch-icon.png` and `og-image.png`.
+- **Logo**: `assets/images/logo-mark.svg` is the mark in the header and footer, and `assets/images/favicon.svg` is the browser-tab icon. Edit those two files to change them across the site. `apple-touch-icon.png`, `og-image.png` and the spec-sheet PDFs have the logo baked in, so regenerate them after a logo change.
 
 ## Quality checks
 

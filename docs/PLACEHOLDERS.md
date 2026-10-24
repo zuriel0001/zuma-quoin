@@ -90,4 +90,4 @@ These read as facts, so make sure they are true for the business:
 
 - [ ] Replace each "Photo placeholder" box with real photography (home, about, quality pages)
 - [ ] Embed a map of the mill on the contact page
-- [ ] Swap in the official logo, if there is one
+- [x] Official logo and favicon added (`assets/images/logo-mark.svg`, `assets/images/favicon.svg`)
