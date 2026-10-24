@@ -32,7 +32,7 @@ docs/PLACEHOLDERS.md       Checklist of details to fill in before launch
 
 Fonts load from Google Fonts, so there is no fonts folder. `README.md` and `.nojekyll` stay at the top level because GitHub needs them there.
 
-All links between pages are relative, so the site works both at `zuriel0001.github.io/zuma-quoin/` and on your own domain.
+All links between pages are relative, so the site works both at `zuriel0001.github.io/zumo-quoin/` and on your own domain.
 
 ## Before launch: fill in the placeholders
 
@@ -51,7 +51,7 @@ python3 -m http.server 8000
 
 1. In the repository, open **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-3. The site appears at `https://<username>.github.io/zuma-quoin/` within a minute or two. To use your own domain, add it in the same settings page.
+3. The site appears at `https://zuriel0001.github.io/zumo-quoin/` within a minute or two. To use your own domain, add it in the same settings page.
 
 Any static host (Netlify, Cloudflare Pages, a cPanel host) also works: upload the whole folder as is.
 
