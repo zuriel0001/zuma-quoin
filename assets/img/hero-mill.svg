@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 440" role="img" aria-labelledby="hero-mill-title">
+  <title id="hero-mill-title">Illustration of a feed mill with grain silos, hens and a sack of poultry feed</title>
+  <defs>
+    <linearGradient id="hm-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbe9bf"/>
+      <stop offset="1" stop-color="#f7dca0"/>
+    </linearGradient>
+    <linearGradient id="hm-silo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e9e2d2"/>
+      <stop offset=".55" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d6ccb6"/>
+    </linearGradient>
+    <linearGradient id="hm-silo-dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfc3a8"/>
+      <stop offset=".55" stop-color="#ece4d2"/>
+      <stop offset="1" stop-color="#bfb294"/>
+    </linearGradient>
+    <linearGradient id="hm-field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a6447"/>
+      <stop offset="1" stop-color="#163a28"/>
+    </linearGradient>
+    <linearGradient id="hm-sack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#eadfc6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="440" fill="url(#hm-sky)"/>
+  <circle cx="370" cy="118" r="74" fill="#f0bb4b" opacity=".55"/>
+  <circle cx="370" cy="118" r="48" fill="#e3a324" opacity=".8"/>
+
+  <!-- birds -->
+  <g fill="none" stroke="#163a28" stroke-width="2" stroke-linecap="round" opacity=".55">
+    <path d="M70 70q7-7 14 0q7-7 14 0"/>
+    <path d="M112 92q5-5 10 0q5-5 10 0"/>
+  </g>
+
+  <!-- distant hills -->
+  <path d="M0 280C70 246 140 240 220 256S380 238 500 214V440H0Z" fill="#c9dccf"/>
+  <path d="M0 304C90 280 170 276 260 292S420 268 500 258V440H0Z" fill="#9fc0a8"/>
+
+  <!-- silos (back) -->
+  <g>
+    <rect x="300" y="150" width="58" height="150" fill="url(#hm-silo-dark)"/>
+    <path d="M296 150 329 118 362 150Z" fill="#a8997a"/>
+    <rect x="296" y="148" width="66" height="6" rx="2" fill="#8f8064"/>
+    <g stroke="#b3a588" stroke-width="1.2">
+      <path d="M300 180h58M300 210h58M300 240h58M300 270h58"/>
+    </g>
+  </g>
+  <g>
+    <rect x="362" y="132" width="66" height="168" fill="url(#hm-silo)"/>
+    <path d="M357 132 395 96 433 132Z" fill="#c1b393"/>
+    <rect x="357" y="130" width="76" height="6" rx="2" fill="#a8997a"/>
+    <g stroke="#d6ccb6" stroke-width="1.2">
+      <path d="M362 165h66M362 198h66M362 231h66M362 264h66"/>
+    </g>
+  </g>
+  <g>
+    <rect x="432" y="166" width="54" height="134" fill="url(#hm-silo-dark)"/>
+    <path d="M428 166 459 138 490 166Z" fill="#a8997a"/>
+    <rect x="428" y="164" width="62" height="6" rx="2" fill="#8f8064"/>
+    <g stroke="#b3a588" stroke-width="1.2">
+      <path d="M432 196h54M432 226h54M432 256h54"/>
+    </g>
+  </g>
+
+  <!-- elevator tower -->
+  <rect x="236" y="74" width="40" height="226" fill="#1e4d35"/>
+  <rect x="230" y="62" width="52" height="20" rx="3" fill="#163a28"/>
+  <path d="M236 92h40M236 140h40M236 188h40M236 236h40" stroke="#2a6447" stroke-width="2"/>
+  <rect x="246" y="102" width="20" height="26" rx="3" fill="#f0bb4b" opacity=".9"/>
+  <rect x="246" y="150" width="20" height="26" rx="3" fill="#f0bb4b" opacity=".6"/>
+  <!-- conveyor to silos -->
+  <path d="M276 78 L395 98" stroke="#163a28" stroke-width="6" stroke-linecap="round"/>
+  <path d="M282 80 L388 98" stroke="#2a6447" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- main mill building -->
+  <path d="M120 300V170l58-40 58 40v130Z" fill="#163a28"/>
+  <path d="M112 174l66-48 66 48" fill="none" stroke="#0f2a1d" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#f0bb4b">
+    <rect x="140" y="186" width="22" height="20" rx="3"/>
+    <rect x="194" y="186" width="22" height="20" rx="3" opacity=".7"/>
+    <rect x="140" y="222" width="22" height="20" rx="3" opacity=".7"/>
+    <rect x="194" y="222" width="22" height="20" rx="3"/>
+  </g>
+  <rect x="160" y="258" width="36" height="42" rx="4" fill="#0f2a1d"/>
+  <path d="M164 266h28M164 274h28M164 282h28M164 290h28" stroke="#1e4d35" stroke-width="2"/>
+  <circle cx="178" cy="160" r="10" fill="#e3a324"/>
+  <path d="M178 153v14M171 160h14" stroke="#163a28" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- field -->
+  <path d="M0 300H500V440H0Z" fill="url(#hm-field)"/>
+  <path d="M0 300C120 316 380 316 500 300" fill="none" stroke="#3b7a58" stroke-width="3" opacity=".7"/>
+  <g stroke="#2f6d4c" stroke-width="2" opacity=".55" fill="none">
+    <path d="M0 340C140 356 360 356 500 340"/>
+    <path d="M0 380C140 398 360 398 500 380"/>
+  </g>
+
+  <!-- wheat stalks -->
+  <g stroke="#e3a324" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M30 440V352"/><path d="M48 440V364"/><path d="M462 440V350"/><path d="M480 440V368"/>
+  </g>
+  <g fill="#f0bb4b">
+    <ellipse cx="30" cy="348" rx="3.5" ry="7"/>
+    <ellipse cx="25" cy="358" rx="3.2" ry="6.5" transform="rotate(-30 25 358)"/>
+    <ellipse cx="35" cy="358" rx="3.2" ry="6.5" transform="rotate(30 35 358)"/>
+    <ellipse cx="25" cy="370" rx="3.2" ry="6.5" transform="rotate(-30 25 370)"/>
+    <ellipse cx="35" cy="370" rx="3.2" ry="6.5" transform="rotate(30 35 370)"/>
+    <ellipse cx="48" cy="360" rx="3.5" ry="7"/>
+    <ellipse cx="43" cy="370" rx="3.2" ry="6.5" transform="rotate(-30 43 370)"/>
+    <ellipse cx="53" cy="370" rx="3.2" ry="6.5" transform="rotate(30 53 370)"/>
+    <ellipse cx="462" cy="346" rx="3.5" ry="7"/>
+    <ellipse cx="457" cy="356" rx="3.2" ry="6.5" transform="rotate(-30 457 356)"/>
+    <ellipse cx="467" cy="356" rx="3.2" ry="6.5" transform="rotate(30 467 356)"/>
+    <ellipse cx="457" cy="368" rx="3.2" ry="6.5" transform="rotate(-30 457 368)"/>
+    <ellipse cx="467" cy="368" rx="3.2" ry="6.5" transform="rotate(30 467 368)"/>
+    <ellipse cx="480" cy="364" rx="3.5" ry="7"/>
+    <ellipse cx="475" cy="374" rx="3.2" ry="6.5" transform="rotate(-30 475 374)"/>
+    <ellipse cx="485" cy="374" rx="3.2" ry="6.5" transform="rotate(30 485 374)"/>
+  </g>
+
+  <!-- feed sack -->
+  <g transform="translate(300 318)">
+    <ellipse cx="44" cy="96" rx="52" ry="8" fill="#0b2016" opacity=".35"/>
+    <path d="M6 16C2 40 0 70 4 92h80c4-22 2-52-2-76Z" fill="url(#hm-sack)"/>
+    <path d="M6 16c10-10 66-10 76 0-6 4-12 6-18 4-10 4-30 4-40 0-6 2-12 0-18-4Z" fill="#e3d6b8"/>
+    <path d="M14 10c8 4 52 4 60 0" stroke="#c9b991" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="16" y="34" width="56" height="44" rx="6" fill="#163a28"/>
+    <text x="44" y="56" fill="#f0bb4b" font-family="Georgia, serif" font-size="15" font-weight="700" text-anchor="middle">ZQ</text>
+    <text x="44" y="70" fill="#e5efe8" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="1.2" text-anchor="middle">LAYER FEED</text>
+  </g>
+
+  <!-- pellets spilling -->
+  <g fill="#c98a12">
+    <ellipse cx="398" cy="408" rx="4" ry="2.6"/>
+    <ellipse cx="410" cy="414" rx="3.6" ry="2.4" transform="rotate(20 410 414)"/>
+    <ellipse cx="420" cy="406" rx="3.6" ry="2.4" transform="rotate(-25 420 406)"/>
+    <ellipse cx="430" cy="415" rx="3.6" ry="2.4"/>
+    <ellipse cx="404" cy="420" rx="3.2" ry="2.2" transform="rotate(40 404 420)"/>
+  </g>
+
+  <!-- hen 1 (pecking) -->
+  <g transform="translate(150 384)">
+    <ellipse cx="0" cy="34" rx="34" ry="6" fill="#0b2016" opacity=".3"/>
+    <path d="M-6 18v14M6 18v14" stroke="#e3a324" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-34-6c-14-18-4-30 8-26-4 10 0 18 4 22Z" fill="#5b2c14"/>
+    <path d="M-30-4c0-18 20-22 32-16 6-10 20-14 26-6 4 6 2 14-2 18 4 12-8 24-26 24-16 0-30-8-30-20Z" fill="#a8582c"/>
+    <path d="M-16-2c10-6 22-4 26 4-8 6-20 6-26-4Z" fill="#8a4321"/>
+    <circle cx="22" cy="-22" r="3" fill="#c2412a"/><circle cx="18" cy="-24" r="3" fill="#c2412a"/><circle cx="26" cy="-20" r="2.6" fill="#c2412a"/>
+    <path d="M30-16l7 3-7 3Z" fill="#e3a324"/>
+    <circle cx="25" cy="-15" r="1.8" fill="#0f2a1d"/>
+    <ellipse cx="30" cy="-8" rx="2.2" ry="3.2" fill="#c2412a"/>
+  </g>
+
+  <!-- hen 2 (standing, facing left) -->
+  <g transform="translate(76 378) scale(-0.86 0.86)">
+    <ellipse cx="0" cy="34" rx="34" ry="6" fill="#0b2016" opacity=".3"/>
+    <path d="M-6 18v14M6 18v14" stroke="#e3a324" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-34-6c-14-18-4-30 8-26-4 10 0 18 4 22Z" fill="#3d2a1a"/>
+    <path d="M-30-4c0-18 20-22 32-16 4-14 18-20 26-12 4 6 2 14-2 18 4 12-8 24-26 24-16 0-30-8-30-20Z" fill="#fbf7ee"/>
+    <path d="M-16-2c10-6 22-4 26 4-8 6-20 6-26-4Z" fill="#e4dccb"/>
+    <circle cx="22" cy="-30" r="3" fill="#c2412a"/><circle cx="18" cy="-31" r="3" fill="#c2412a"/><circle cx="26" cy="-28" r="2.6" fill="#c2412a"/>
+    <path d="M30-22l7 3-7 3Z" fill="#e3a324"/>
+    <circle cx="25" cy="-21" r="1.8" fill="#0f2a1d"/>
+    <ellipse cx="30" cy="-13" rx="2.2" ry="3.2" fill="#c2412a"/>
+  </g>
+</svg>

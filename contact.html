@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us &amp; Request a Quote | Zumo Quoin Limited</title>
+    <meta name="description" content="Contact Zumo Quoin Limited for feed prices, bulk orders, distributor enquiries and nutrition advice. Send an enquiry and our team will get back to you.">
+    <link rel="canonical" href="https://www.example.com/contact.html">
+    <meta name="theme-color" content="#0f2a1d">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zumo Quoin Limited">
+    <meta property="og:title" content="Contact Us &amp; Request a Quote | Zumo Quoin Limited">
+    <meta property="og:description" content="Contact Zumo Quoin Limited for feed prices, bulk orders, distributor enquiries and nutrition advice. Send an enquiry and our team will get back to you.">
+    <meta property="og:url" content="https://www.example.com/contact.html">
+    <meta property="og:image" content="https://www.example.com/assets/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500&family=Inter:wght@400..700&display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>document.documentElement.classList.replace("no-js", "js")</script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Zumo Quoin Limited, home">
+        <img class="brand__mark" src="assets/img/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand__text"><span class="brand__name">Zumo Quoin</span><span class="brand__sub">LIMITED</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main" data-nav>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html">About us</a></li>
+          <li><a class="nav__link" href="products.html">Our feeds</a></li>
+          <li><a class="nav__link" href="quality.html">Process &amp; quality</a></li>
+          <li><a class="nav__link" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="btn btn--sm" href="contact.html?enquiry=quote">Request a quote <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero on-dark">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+        <span class="eyebrow">Contact us</span>
+        <h1>Let&rsquo;s talk about your flock</h1>
+        <p>Ask for a quote, place an order, become a distributor or get feeding advice. Send us a message and the right person on our team will reply.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="card form-card">
+          <h2 style="font-size:var(--step-2)">Send an enquiry</h2>
+          <p class="text-muted">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+          <!-- Form endpoint: replace YOUR_FORM_ID with a Formspree (or similar) form ID. See README. -->
+          <form class="form mt-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate data-enquiry-form data-fallback-email="">
+            <fieldset class="choice-group">
+              <legend class="field"><span style="font-weight:600;color:var(--green-900)">What can we help with?</span></legend>
+              <label class="choice"><input type="radio" name="enquiry_type" value="quote" checked><span>Price quote</span></label>
+              <label class="choice"><input type="radio" name="enquiry_type" value="order"><span>Place an order</span></label>
+              <label class="choice"><input type="radio" name="enquiry_type" value="distributor"><span>Become a distributor</span></label>
+              <label class="choice"><input type="radio" name="enquiry_type" value="advice"><span>Feeding advice</span></label>
+              <label class="choice"><input type="radio" name="enquiry_type" value="visit"><span>Mill visit</span></label>
+              <label class="choice"><input type="radio" name="enquiry_type" value="other"><span>Something else</span></label>
+            </fieldset>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="name">Full name <span aria-hidden="true">*</span></label>
+                <input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                <span class="field__error" id="name-error">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="company">Farm or company <span class="optional">(optional)</span></label>
+                <input class="input" id="company" name="company" type="text" autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+                <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+\(\)\-\s]{7,20}" aria-describedby="phone-error">
+                <span class="field__error" id="phone-error">Please enter a valid phone number.</span>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="optional">(optional)</span></label>
+                <input class="input" id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+                <span class="field__error" id="email-error">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="product">Feed of interest <span class="optional">(optional)</span></label>
+                <select class="select" id="product" name="product">
+                  <option value="">Not sure yet</option>
+                      <option value="chick-starter">Chick Starter</option>
+                      <option value="grower-mash">Grower Mash</option>
+                      <option value="layer-mash">Layer Mash</option>
+                      <option value="layer-pellets">Layer Pellets</option>
+                      <option value="broiler-starter">Broiler Starter</option>
+                      <option value="broiler-finisher">Broiler Finisher</option>
+                      <option value="breeder">Breeder Feed</option>
+                      <option value="layer-concentrate">Layer Concentrate</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="flock">Number of birds <span class="optional">(optional)</span></label>
+                <input class="input" id="flock" name="flock_size" type="number" min="1" inputmode="numeric">
+              </div>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="quantity">Quantity needed <span class="optional">(optional)</span></label>
+                <input class="input" id="quantity" name="quantity" type="text" placeholder="e.g. 40 bags per month">
+              </div>
+              <div class="field">
+                <label for="location">Delivery location <span class="optional">(optional)</span></label>
+                <input class="input" id="location" name="location" type="text" autocomplete="address-level2" placeholder="Town or area">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea class="textarea" id="message" name="message" required minlength="10" aria-describedby="message-error"></textarea>
+              <span class="field__error" id="message-error">Please tell us a little more (at least 10 characters).</span>
+            </div>
+
+            <!-- Honeypot: hidden from people, catches spam bots -->
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="gotcha">Leave this field empty</label>
+              <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" name="consent" value="yes" required aria-describedby="consent-error">
+                <span>I agree that Zumo Quoin Limited may contact me about this enquiry. <span aria-hidden="true">*</span></span>
+              </label>
+              <span class="field__error" id="consent-error">Please tick this box so we can reply to you.</span>
+            </div>
+
+            <div class="form-status" role="status" tabindex="-1" data-form-status>
+              <svg data-status-icon="success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16 9.7"/></svg>
+              <svg data-status-icon="error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg>
+              <p data-form-status-text></p>
+            </div>
+
+            <div>
+              <button class="btn" type="submit">
+                Send enquiry
+                <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-aside" aria-label="Contact details">
+          <div class="card">
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="icon-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3l1.5 4.5-2 1.2a11 11 0 0 0 7.3 7.3l1.2-2 4.5 1.5v3A2 2 0 0 1 18.5 21 16 16 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></svg></span>
+                <div><h3>Call or WhatsApp</h3><p><span class="ph">[+000 000 000 000]</span></p></div>
+              </div>
+              <div class="contact-item">
+                <span class="icon-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></span>
+                <div><h3>Email</h3><p><span class="ph">[sales@company-domain]</span></p></div>
+              </div>
+              <div class="contact-item">
+                <span class="icon-badge icon-badge--gold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <div><h3>Mill &amp; office</h3><p><span class="ph">[Street address]</span><br><span class="ph">[Town, region, country]</span><br><span class="ph">[Digital address / GPS code]</span></p></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.5rem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Opening hours</h3>
+            <table class="hours">
+              <caption class="visually-hidden">Opening hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday &ndash; Friday</th><td><span class="ph">[08:00 &ndash; 17:00]</span></td></tr>
+                <tr><th scope="row">Saturday</th><td><span class="ph">[08:00 &ndash; 13:00]</span></td></tr>
+                <tr><th scope="row">Sunday</th><td><span class="ph">[Closed]</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--paper" style="padding-top:var(--space-8)">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Find us</span>
+          <h2>Visit the mill</h2>
+        </div>
+        <div class="photo-slot map-slot" data-reveal>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20Z"/><path d="M9 4v13.5M15 6.5V20"/></svg>
+            <strong>Map placeholder</strong><br>
+            Embed a Google Maps view of the mill location here once the address is confirmed.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Zumo Quoin Limited, home">
+        <img class="brand__mark" src="assets/img/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand__text"><span class="brand__name">Zumo Quoin</span><span class="brand__sub">LIMITED</span></span>
+      </a>
+          <p>Quality poultry feed for chicks, layers, broilers and breeders, milled and bagged for farms across <span class="ph">[region / country]</span>.</p>
+        </div>
+        <div>
+          <h2 class="footer-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="products.html">Our feeds</a></li>
+            <li><a href="quality.html">Process &amp; quality</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Our feeds</h2>
+          <ul class="footer-links">
+            <li><a href="products.html#chicks">Chick feeds</a></li>
+            <li><a href="products.html#layers">Layer &amp; pullet feeds</a></li>
+            <li><a href="products.html#broilers">Broiler feeds</a></li>
+            <li><a href="products.html#specialty">Breeder &amp; concentrates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Get in touch</h2>
+          <ul class="footer-contact">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="ph">[Mill street address, town, region]</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3.5h3l1.5 4.5-2 1.2a11 11 0 0 0 7.3 7.3l1.2-2 4.5 1.5v3A2 2 0 0 1 18.5 21 16 16 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></svg><span class="ph">[+000 000 000 000]</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg><span class="ph">[sales@company-domain]</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon&ndash;Fri <span class="ph">[08:00&ndash;17:00]</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Zumo Quoin Limited. All rights reserved.</p>
+        <p>Company registration no. <span class="ph">[number]</span></p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
