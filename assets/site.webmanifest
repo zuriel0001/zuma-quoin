@@ -3,7 +3,7 @@
   "short_name": "Zumo Quoin",
   "icons": [
     {
-      "src": "../favicon.svg",
+      "src": "images/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     },
