@@ -633,6 +633,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
+  min-height: 44px;
   font-weight: 600;
   color: var(--green-700);
   text-decoration: none;
@@ -802,6 +803,9 @@ textarea {
   color: #5f7d69;
 }
 .breadcrumb a {
+  display: inline-block;
+  margin-block: -0.6rem;
+  padding-block: 0.6rem;
   color: #d5e3d9;
   text-decoration: none;
 }
@@ -1365,6 +1369,11 @@ textarea {
   gap: var(--space-7);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
 }
+@media (min-width: 600px) and (max-width: 959px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media (min-width: 960px) {
   .footer-grid {
     grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
@@ -1389,6 +1398,21 @@ textarea {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+/* Bigger tap targets for footer links on touch screens */
+@media (pointer: coarse) {
+  .footer-links {
+    gap: 0;
+  }
+  .footer-links a {
+    display: inline-block;
+    padding-block: 0.6rem;
+  }
+  .footer-contact a {
+    display: inline-block;
+    margin-block: -0.5rem;
+    padding-block: 0.5rem;
+  }
 }
 .footer-contact {
   display: grid;
@@ -1422,6 +1446,12 @@ textarea {
 }
 .footer-bottom p {
   margin: 0;
+}
+/* Keep the last footer line clear of the WhatsApp button on phones */
+@media (max-width: 640px) {
+  .footer-bottom {
+    padding-bottom: calc(var(--space-5) + 72px + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* Reveal-on-scroll (progressive enhancement; only when JS adds .js) */
@@ -1744,7 +1774,9 @@ textarea {
 }
 .range {
   width: 100%;
+  min-height: 44px;
   accent-color: var(--green-800);
+  cursor: pointer;
 }
 .range-row {
   display: flex;
@@ -1756,6 +1788,16 @@ textarea {
   flex-shrink: 0;
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+/* On narrow phones the slider gets its own full-width line */
+@media (max-width: 420px) {
+  .range-row {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .range-row .input {
+    width: 100%;
+  }
 }
 
 /* Products page */
@@ -1943,9 +1985,19 @@ textarea {
   color: var(--muted);
 }
 .specs td {
+  white-space: nowrap;
   text-align: right;
   font-weight: 600;
   color: var(--green-900);
+}
+@media (max-width: 400px) {
+  .product__body {
+    padding-inline: var(--space-5);
+  }
+  .specs th,
+  .specs td {
+    padding-inline: var(--space-3);
+  }
 }
 .product .btn-row {
   margin-top: auto;
@@ -2532,10 +2584,12 @@ h3 > svg {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: var(--space-2);
+  gap: 0;
   font-size: 0.95rem;
 }
 .toc a {
+  display: inline-block;
+  padding-block: 0.3rem;
   color: var(--muted);
   text-decoration: none;
 }

@@ -59,6 +59,9 @@ body {
   font-size: 0.95rem;
 }
 .toolbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--green-700);
   font-weight: 600;
   text-decoration: none;
